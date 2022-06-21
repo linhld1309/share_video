@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.8'
+ruby '2.7.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0', '>= 6.0.2'
@@ -70,6 +70,17 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem "capistrano"
+  gem "capistrano3-puma"
+  gem "capistrano-rails", require: false
+  gem 'capistrano-passenger'
+  gem "capistrano-yarn"
+  gem "capistrano-bundler", require: false
+  gem "capistrano-rbenv"
+  gem 'capistrano-linked-files'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

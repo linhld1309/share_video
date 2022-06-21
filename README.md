@@ -1,9 +1,9 @@
-# ophelia
+# share_video
 
 A YouTube Clone using Ruby on Rails 
 
 ## Description
-Ophelia is a video sharing platform built using Ruby on Rails. It provides the basic functionalities of YouTube such as uploading a video, liking a video, commnting on a video, and checking the views for a video.
+Share video is a video sharing platform built using Ruby on Rails. It provides the basic functionalities of YouTube such as uploading a video, liking a video, commnting on a video, and checking the views for a video.
 
 It has four models:
 - Video:
@@ -28,8 +28,8 @@ It has four models:
   ## Deployment
   The platform was built using: RoR as a web framework, MySQL as DBMS, bulma as a CSS framework.
   In order to deploy the application, please follow these steps after making sure that Ruby, Rails, and MySQL are installed:
-  - `git clone https://github.com/Lekssays/ophelia.git`
-  - `cd ophelia`
+  - `git clone https://github.com/Lekssays/share_video.git`
+  - `cd share_video`
   - `bundle install`
   - `rake db:create`
   - `rake db:migrate`

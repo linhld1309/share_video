@@ -31,9 +31,6 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
-    
-    binding.pry
-    
     @video = current_user.videos.build(video_params)
 
     respond_to do |format|
@@ -84,7 +81,6 @@ class VideosController < ApplicationController
       format.html {redirect_back fallback_location: root_path}
     end
   end
-
 
 
   private
