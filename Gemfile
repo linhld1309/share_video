@@ -2,13 +2,16 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.5'
+gem 'webpacker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0', '>= 6.0.2'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-# Use Puma as the app server
-gem 'puma', '~> 3.11'
+# Use Puma as the app server on Windows
+gem 'puma', '~> 3.11', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Use unicorn on debian
+gem 'unicorn', platform: :ruby
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

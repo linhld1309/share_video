@@ -60,4 +60,9 @@
 #     # password: "please use keys"
 #   }
 
+# config/deploy/staging.rb
+set :branch, ENV['BRANCH'] || 'develop'
+set :rails_env, 'production'
+set :unicorn_env, :production
+set :unicorn_rack_env, 'production'
 server "34.125.204.123", user: "deploy", roles: %w{app db web}

@@ -5,7 +5,6 @@ set :user, 'deploy'
 
 set :application, "share_video"
 set :repo_url, "git@github.com:linhld1309/share_video.git"
-set :branch, "master"
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 
 # set :pty, true
@@ -17,7 +16,8 @@ set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_
 
 # set :linked_files, fetch(:linked_files, []).push('config/master.key', 'config/production.key')
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
-set :linked_files, %w(config/master.key)
+# append :linked_files, "config/master.key"
+# set :linked_files, %w{config/database.yml}
 
 set :keep_releases, 5
 set :rbenv_path, '/home/deploy/.rbenv/'

@@ -63,4 +63,6 @@ set :stage, :production
 set :rails_env, :production
 set :branch, "master"
 set :deploy_to, "/home/deploy/deploy/share_video"
-server "34.125.204.123", user: fetch(:user), port: fetch(:port), roles: %w(web app db)
+set :unicorn_env, :production
+set :unicorn_rack_env, :production
+server "34.125.204.123", user: "deploy", port: fetch(:port), roles: %w(web app db)
